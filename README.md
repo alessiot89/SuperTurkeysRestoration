@@ -10,7 +10,7 @@ Please note these will not make Super Turkeys a permanent asset of primal game d
 * Setup the Spawn Entries Conteiners to add the Super Turkeys where Dodos, Aberrant Dodos and Jerboas do spawn (see below for each official Map config)
 * Adjust at your will the spawn weight chances for Super Turkes to spawn instead of Dodos, Aberrant Dodos and Jerboas in the config.json or leave them at default. Note the values are in normalized between 0 and 1.0, any out of range value will be reverted to default plugin values.
 
-## Official Maps Condfig
+## Official Maps configs
 ### The Island
 ```
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesBeach_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
