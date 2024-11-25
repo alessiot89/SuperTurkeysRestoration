@@ -80,7 +80,7 @@ void hook_APrimalWorldSettings_PreGameplaySetup( APrimalWorldSettings* settings 
     FClassRemappingWeight dodoWeights;
     dodoWeights.FromClass = dodoClass;
     dodoWeights.ToClasses.Add( superTurkeyClass );
-    dodoWeights.Weights.Add( 0.2F );
+    dodoWeights.Weights.Add( dodoReplacementWeight );
     dodoWeights.ToClasses.Add( dodoClass );
     dodoWeights.Weights.Add( 1.0F );
     dodoWeights.ActiveEvent = activeEvent;
@@ -91,7 +91,7 @@ void hook_APrimalWorldSettings_PreGameplaySetup( APrimalWorldSettings* settings 
     FClassRemappingWeight dodoAberrantWeights;
     dodoAberrantWeights.FromClass = dodoAberrantClass;
     dodoAberrantWeights.ToClasses.Add( superTurkeyClass );
-    dodoAberrantWeights.Weights.Add( 0.4F );
+    dodoAberrantWeights.Weights.Add( aberrantDodoReplacementWeight );
     dodoAberrantWeights.ToClasses.Add( dodoClass );
     dodoAberrantWeights.Weights.Add( 1.0F );
     dodoAberrantWeights.ActiveEvent = activeEvent;
@@ -102,7 +102,7 @@ void hook_APrimalWorldSettings_PreGameplaySetup( APrimalWorldSettings* settings 
     FClassRemappingWeight jerboaWeights;
     jerboaWeights.FromClass = jerboaClass;
     jerboaWeights.ToClasses.Add( superTurkeyClass );
-    jerboaWeights.Weights.Add( 0.4F );
+    jerboaWeights.Weights.Add( jerboaReplacementWeight );
     jerboaWeights.ToClasses.Add( dodoClass );
     jerboaWeights.Weights.Add( 1.0F );
     jerboaWeights.ActiveEvent = activeEvent;
