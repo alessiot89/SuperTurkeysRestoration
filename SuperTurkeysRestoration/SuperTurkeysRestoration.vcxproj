@@ -56,8 +56,7 @@
       <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(ProjectDir)\PluginInfo.json $(OutDir)
-copy $(ProjectDir)\Config.json $(OutDir)</Command>
+      <Command>copy $(ProjectDir)\PluginInfo.json $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
