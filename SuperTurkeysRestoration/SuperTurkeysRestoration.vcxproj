@@ -66,6 +66,7 @@ copy $(ProjectDir)\Config.json $(OutDir)</Command>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\README.md" />
     <None Include="config.json" />
     <None Include="PluginInfo.json" />
   </ItemGroup>

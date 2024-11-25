@@ -1,6 +1,6 @@
 {
     "DebugLog": true,
-    "DodoReplacementWeight": 0.2,
-    "AberrantDodoReplacementWeight": 0.4,
+    "DodoReplacementWeight": 0.15,
+    "AberrantDodoReplacementWeight": 0.25,
     "JerboaReplacementWeight": 0.4
 }

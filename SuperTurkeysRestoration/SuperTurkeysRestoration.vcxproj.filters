@@ -26,5 +26,6 @@
     <None Include="config.json">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\README.md" />
   </ItemGroup>
 </Project>

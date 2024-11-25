@@ -2,12 +2,12 @@
 Re-adds Turkey Trial Super Turkeys atching the GlobalNPCRandomSpawnClassWeights data at map startup. In such way it is possible to setup the Super Turkeys using the ini config.
 Like in Turkey Trial, Super Turkeys will spawn along Dodos, Aberrant Dodos and Jerboas depending on the map spawn container entries.
 Please note these will not make Super Turkeys a permanent asset of primal game data, which means at every server shutdown or restart they will be wiped from the map to start respawning at next server run (Wishbones will stay).
-
+NOTE: due its unique nature how it handles PGD assets, **Genesis: Part 2 is not supported**. Trying to use this plugin on Genesis: Part 2 will make the server to crash.
 
 ## How to install
 * Extract the plugin in ShooterGame\Binaries\Win64\ArkApi\Plugins
 * -ActiveEvent=TurkeyTrial must be added at command line to allow the TurkeyTrial crafting using the Super Turkeys WishBones.
-* Setup the Spawn Entries Conteiners to add the Super Turkeys where Dodos, Aberrant Dodos and Jerboas do spawn (see below for each official Map config)
+* Setup the Spawn Entries Conteiners to add the Super Turkeys where Dodos, Aberrant Dodos and Jerboas do spawn (see below for each official Map config).
 * Adjust at your will the spawn weight chances for Super Turkes to spawn instead of Dodos, Aberrant Dodos and Jerboas in the config.json or leave them at default. Note the values are in normalized between 0 and 1.0, any out of range value will be reverted to default plugin values.
 
 ## Official Maps Condfig
@@ -82,17 +82,6 @@ ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_DinoS
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="SE_DinoSpawnEntriesOasis_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.250000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
 ```
 
-### Genesis: Part 2
-```
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesMeanJungle_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.100000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesNiceJungle_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.100000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesRiverLand_Easy_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesRiverLand_Hard_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.050000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesRiverLand_Medium_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_GardensLake_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesBeach_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-```
-
 ### Lost Island
 ```
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesBeach_LostIsland_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
@@ -139,13 +128,6 @@ ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Gen1_Arc
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Gen1_Arctic_Forest_Nice_DinoSpawnEntries_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=1.000000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="Gen1_OceanAboveWater_Land_DinoSpawnEntries_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=1.000000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesJungle",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.100000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesMeanJungle_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.100000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesNiceJungle_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.100000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesRiverLand_Easy_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesRiverLand_Hard_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.050000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesRiverLand_Medium_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntries_GardensLake_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
-ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesBeach_Gen2_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesBeach_LostIsland_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.425000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesJungle_LostIsland_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.100000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))
 ConfigAddNPCSpawnEntriesContainer=(NPCSpawnEntriesContainerClassString="DinoSpawnEntriesDesertOasis_LostIsland_C",NPCSpawnEntries=((AnEntryName="turkeys",EntryWeight=0.250000,NPCsToSpawnStrings=("Turkey_Character_BP_C"))),NPCSpawnLimits=((NPCClassString="Turkey_Character_BP_C",MaxPercentageOfDesiredNumToAllow=1.000000)))

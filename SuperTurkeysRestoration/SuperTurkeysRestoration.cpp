@@ -70,33 +70,46 @@ DECLARE_HOOK( APrimalWorldSettings_PreGameplaySetup, void, APrimalWorldSettings*
 
 void hook_APrimalWorldSettings_PreGameplaySetup( APrimalWorldSettings* settings )
 {
-    auto primalGameData = ArkApi::GetApiUtils().GetGameData();
-    auto globalNPCRandomSpawnClassWeights = primalGameData->GlobalNPCRandomSpawnClassWeightsField();
+
+    FString superTurkeyBPPath{ superTurkeyBP };
+    UClass* superTurkeyClass = UVictoryCore::BPLoadClass( &superTurkeyBPPath );
+    auto activeEvent = ArkApi::GetApiUtils().GetGameState()->ActiveEventField();
 
     FString dodoBPPath{ dodoBP };
     UClass* dodoClass = UVictoryCore::BPLoadClass( &dodoBPPath );
-    FString dodoAberrantBPPath{ dodoAberrantBP };
-    UClass* dodoAberrantClass = UVictoryCore::BPLoadClass( &dodoAberrantBPPath );
-    FString jerboaBPPath{ jerboaBP };
-    UClass* jerboaClass = UVictoryCore::BPLoadClass( &jerboaBPPath );
-    FString superTurkeyBPPath{ superTurkeyBP };
-    UClass* superTurkeyClass = UVictoryCore::BPLoadClass( &superTurkeyBPPath );
-
     FClassRemappingWeight dodoWeights;
     dodoWeights.FromClass = dodoClass;
     dodoWeights.ToClasses.Add( superTurkeyClass );
     dodoWeights.Weights.Add( 0.2F );
+    dodoWeights.ToClasses.Add( dodoClass );
+    dodoWeights.Weights.Add( 1.0F );
+    dodoWeights.ActiveEvent = activeEvent;
+    dodoWeights.bExactMatch = true;
 
+    FString dodoAberrantBPPath{ dodoAberrantBP };
+    UClass* dodoAberrantClass = UVictoryCore::BPLoadClass( &dodoAberrantBPPath );
     FClassRemappingWeight dodoAberrantWeights;
     dodoAberrantWeights.FromClass = dodoAberrantClass;
     dodoAberrantWeights.ToClasses.Add( superTurkeyClass );
     dodoAberrantWeights.Weights.Add( 0.4F );
+    dodoAberrantWeights.ToClasses.Add( dodoClass );
+    dodoAberrantWeights.Weights.Add( 1.0F );
+    dodoAberrantWeights.ActiveEvent = activeEvent;
+    dodoAberrantWeights.bExactMatch = true;
 
+    FString jerboaBPPath{ jerboaBP };
+    UClass* jerboaClass = UVictoryCore::BPLoadClass( &jerboaBPPath );
     FClassRemappingWeight jerboaWeights;
     jerboaWeights.FromClass = jerboaClass;
     jerboaWeights.ToClasses.Add( superTurkeyClass );
     jerboaWeights.Weights.Add( 0.4F );
+    jerboaWeights.ToClasses.Add( dodoClass );
+    jerboaWeights.Weights.Add( 1.0F );
+    jerboaWeights.ActiveEvent = activeEvent;
+    jerboaWeights.bExactMatch = true;
 
+    auto primalGameData = ArkApi::GetApiUtils().GetGameData();
+    auto globalNPCRandomSpawnClassWeights = primalGameData->GlobalNPCRandomSpawnClassWeightsField();
     globalNPCRandomSpawnClassWeights.Add( dodoWeights );
     globalNPCRandomSpawnClassWeights.Add( dodoAberrantWeights );
     globalNPCRandomSpawnClassWeights.Add( jerboaWeights );
