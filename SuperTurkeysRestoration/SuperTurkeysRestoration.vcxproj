@@ -67,7 +67,6 @@ copy $(ProjectDir)\Config.json $(OutDir)</Command>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
-    <None Include="config.json" />
     <None Include="PluginInfo.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
