@@ -92,7 +92,7 @@ void hook_APrimalWorldSettings_PreGameplaySetup( APrimalWorldSettings* settings 
     dodoAberrantWeights.FromClass = dodoAberrantClass;
     dodoAberrantWeights.ToClasses.Add( superTurkeyClass );
     dodoAberrantWeights.Weights.Add( aberrantDodoReplacementWeight );
-    dodoAberrantWeights.ToClasses.Add( dodoClass );
+    dodoAberrantWeights.ToClasses.Add( dodoAberrantClass );
     dodoAberrantWeights.Weights.Add( 1.0F );
     dodoAberrantWeights.ActiveEvent = activeEvent;
     dodoAberrantWeights.bExactMatch = true;
@@ -103,7 +103,7 @@ void hook_APrimalWorldSettings_PreGameplaySetup( APrimalWorldSettings* settings 
     jerboaWeights.FromClass = jerboaClass;
     jerboaWeights.ToClasses.Add( superTurkeyClass );
     jerboaWeights.Weights.Add( jerboaReplacementWeight );
-    jerboaWeights.ToClasses.Add( dodoClass );
+    jerboaWeights.ToClasses.Add( jerboaClass );
     jerboaWeights.Weights.Add( 1.0F );
     jerboaWeights.ActiveEvent = activeEvent;
     jerboaWeights.bExactMatch = true;
