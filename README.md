@@ -9,7 +9,7 @@ NOTE: due its unique nature how it handles PGD assets, **Genesis: Part 2 is not 
 ## How to install
 * Extract the plugin in ShooterGame\Binaries\Win64\ArkApi\Plugins
 * -ActiveEvent=TurkeyTrial must be added at command line to allow the TurkeyTrial crafting using the Super Turkeys WishBones.
-* Setup the Spawn Entries Conteiners to add the Super Turkeys where Dodos, Aberrant Dodos and Jerboas do spawn (see below for each official Map config).
+* Setup and tune the Spawn Entries Conteiners to add the Super Turkeys where Dodos, Aberrant Dodos and Jerboas do spawn (see below for each official Map config examples).
 
 ## Official Maps configs
 ### The Island
