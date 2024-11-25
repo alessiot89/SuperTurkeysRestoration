@@ -1,7 +1,9 @@
 # SuperTurkeysRestoration
 Re-adds Turkey Trial Super Turkeys atching the GlobalNPCRandomSpawnClassWeights data at map startup. In such way it is possible to setup the Super Turkeys using the ini config.
+
 Like in Turkey Trial, Super Turkeys will spawn along Dodos, Aberrant Dodos and Jerboas depending on the map spawn container entries.
 Please note these will not make Super Turkeys a permanent asset of primal game data, which means at every server shutdown or restart they will be wiped from the map to start respawning at next server run (Wishbones will stay).
+
 NOTE: due its unique nature how it handles PGD assets, **Genesis: Part 2 is not supported**. Trying to use this plugin on Genesis: Part 2 will make the server to crash.
 
 ## How to install
