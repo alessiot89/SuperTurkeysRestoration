@@ -159,7 +159,7 @@ void ReadConfig()
         dodoReplacementWeight = config["DodoReplacementWeight"];
         if( ( dodoReplacementWeight < 0.0F ) or ( dodoReplacementWeight > 1.0F ) )
         {
-            debugLog( "Indalid DodoReplacementWeight value, revert to default of " + std::to_string( defaultDodoReplacementWeight ),
+            debugLog( "Invalid DodoReplacementWeight value, revert to default of " + std::to_string( defaultDodoReplacementWeight ),
                       LogLevel::warning );
         }
         debugLog( "DodoReplacementWeight: " + std::to_string( dodoReplacementWeight ),
@@ -168,7 +168,7 @@ void ReadConfig()
     catch( const std::exception& )
     {
         dodoReplacementWeight = defaultDodoReplacementWeight;
-        debugLog( "Invalid DodoReplacementWeight value, reverting to default " + std::to_string( defaultDodoReplacementWeight ),
+        debugLog( "Invalid DodoReplacementWeight value, revert to default of " + std::to_string( defaultDodoReplacementWeight ),
                   LogLevel::warning );
     }
     // Try to read AberrantDodoReplacementWeight value
@@ -177,7 +177,7 @@ void ReadConfig()
         aberrantDodoReplacementWeight = config["AberrantDodoReplacementWeight"];
         if( ( aberrantDodoReplacementWeight < 0.0F ) or ( aberrantDodoReplacementWeight > 1.0F ) )
         {
-            debugLog( "Indalid AberrantDodoReplacementWeight value, revert to default of " + std::to_string( defaultAberrantDodoReplacementWeight ),
+            debugLog( "Invalid AberrantDodoReplacementWeight value, revert to default of " + std::to_string( defaultAberrantDodoReplacementWeight ),
                       LogLevel::warning );
         }
         debugLog( "AberrantDodoReplacementWeight: " + std::to_string( aberrantDodoReplacementWeight ),
@@ -186,7 +186,7 @@ void ReadConfig()
     catch( const std::exception& )
     {
         aberrantDodoReplacementWeight = defaultAberrantDodoReplacementWeight;
-        debugLog( "Invalid AberrantDodoReplacementWeight value, reverting to default " + std::to_string( defaultAberrantDodoReplacementWeight ),
+        debugLog( "Invalid AberrantDodoReplacementWeight value, revert to default of " + std::to_string( defaultAberrantDodoReplacementWeight ),
                   LogLevel::warning );
     }
     // Try to read JerboaReplacementWeight value
@@ -195,7 +195,7 @@ void ReadConfig()
         jerboaReplacementWeight = config["JerboaReplacementWeight"];
         if( ( jerboaReplacementWeight < 0.0F ) or ( jerboaReplacementWeight > 1.0F ) )
         {
-            debugLog( "Indalid JerboaReplacementWeight value, revert to default of " + std::to_string( defaultJerboaReplacementWeight ),
+            debugLog( "Invalid JerboaReplacementWeight value, revert to default of " + std::to_string( defaultJerboaReplacementWeight ),
                       LogLevel::warning );
         }
         debugLog( "JerboaReplacementWeight: " + std::to_string( jerboaReplacementWeight ),
@@ -204,7 +204,7 @@ void ReadConfig()
     catch( const std::exception& )
     {
         jerboaReplacementWeight = defaultJerboaReplacementWeight;
-        debugLog( "Invalid JerboaReplacementWeight value, reverting to default " + std::to_string( defaultJerboaReplacementWeight ),
+        debugLog( "Invalid JerboaReplacementWeight value, revert to default of " + std::to_string( defaultJerboaReplacementWeight ),
                   LogLevel::warning );
     }
 }
