@@ -128,9 +128,9 @@ void ReadConfig()
         debugLog( "================================================================================" );
         debugLog( "Super Turkeys Restoration Plugin loaded" );
         debugLog( "================================================================================" );
-        debugLog( "Can't open Config.json!",
+        debugLog( "Can't open config.json!",
                   LogLevel::error );
-        throw std::runtime_error( "Can't open Config.json" );
+        throw std::runtime_error( "Can't open config.json" );
     }
     file >> config;
     file.close();
